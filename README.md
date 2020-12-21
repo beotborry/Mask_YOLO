@@ -21,3 +21,12 @@ Basic Exmaple
     python detect.py --weights ./weights/best.pt --conf 0.4 --source 0
     
     python detect.py --weights ./weights/best.pt --conf 0.4 --source DATA_PATH
+
+---
+### NOTICE
+
+requirements.txt 에서 torchvision>=0.8.1을 요구하고 있는데, conda 환경에서 pip로 설치가 안되는 오류를 확인해서 whl 파일을 첨부하였습니다.
+
+현재 디렉토리에서 다음 코드를 통해 설치하실 수 있습니다.
+
+    python -m pip install whl_FILE_PATH
