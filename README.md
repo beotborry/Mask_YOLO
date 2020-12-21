@@ -30,3 +30,8 @@ requirements.txt 에서 torchvision>=0.8.1을 요구하고 있는데, conda 환�
 현재 디렉토리에서 다음 코드를 통해 설치하실 수 있습니다.
 
     python -m pip install whl_FILE_PATH
+    
+---
+### TEST RESULT
+
+테스트 사진과 영상에 대한 detection 결과는 ./test_result 에서 확인하실 수 있습니다.
