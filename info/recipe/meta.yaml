@@ -1,0 +1,62 @@
+# This file created by conda-build 3.17.8
+# ------------------------------------------------
+
+package:
+    name: intel-openmp
+    version: 2020.2
+source:
+    -   folder: mkl
+        url: https://anaconda.org/intel/mkl/2020.2/download/win-64/mkl-2020.2-intel_254.tar.bz2
+    -   folder: mkl-devel
+        url: https://anaconda.org/intel/mkl-devel/2020.2/download/win-64/mkl-devel-2020.2-intel_254.tar.bz2
+    -   folder: mkl-include
+        url: https://anaconda.org/intel/mkl-include/2020.2/download/win-64/mkl-include-2020.2-intel_254.tar.bz2
+    -   folder: intel-openmp
+        url: https://anaconda.org/intel/intel-openmp/2020.2/download/win-64/intel-openmp-2020.2-intel_254.tar.bz2
+    -   folder: daal
+        url: https://anaconda.org/intel/daal/2020.2/download/win-64/daal-2020.2-intel_254.tar.bz2
+    -   folder: daal-include
+        url: https://anaconda.org/intel/daal-include/2020.2/download/win-64/daal-include-2020.2-intel_254.tar.bz2
+    -   folder: daal-static
+        url: https://anaconda.org/intel/daal-static/2020.2/download/win-64/daal-static-2020.2-intel_254.tar.bz2
+    -   folder: daal-devel
+        url: https://anaconda.org/intel/daal-devel/2020.2/download/win-64/daal-devel-2020.2-intel_254.tar.bz2
+build:
+    binary_relocation: false
+    detect_binary_files_with_prefix: false
+    missing_dso_whitelist:
+        - $RPATH/libtbb.2.so
+        - $RPATH/libtbbmalloc.so.1
+        - /lib*/ld-linux.so.2
+        - /lib*/libc.so.6
+        - /lib*/libdl.so.2
+        - /lib*/libgcc_s.so.1
+        - /lib*/libm.so.6
+        - /lib*/libpthread.so.0
+        - /lib64/ld-linux-x86-64.so.2
+        - C:\Windows\System32\WINTRUST.dll
+        - libcoi_device.so.0
+        - libiomp5.so
+    noarch: false
+    number: 254
+    script: repack.bat
+    string: '254'
+about:
+    description: 'Intel openmp runtime implementation
+
+        This package is a repackaged set of binaries obtained directly from Intel\''s
+        anaconda.org channel.
+
+        '
+    doc_url: https://software.intel.com/en-us/node/522690
+    home: https://software.intel.com/en-us/node/522690
+    license: LicenseRef-ProprietaryIntel
+    license_family: Proprietary
+    license_file: mkl/info/LICENSE.txt
+    summary: Math library for Intel and compatible processors
+extra:
+    copy_test_source_files: true
+    final: true
+    recipe-maintainers:
+        - beckermr
+        - isuruf
