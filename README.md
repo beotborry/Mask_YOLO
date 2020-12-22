@@ -35,3 +35,8 @@ requirements.txt 에서 torchvision>=0.8.1을 요구하고 있는데, conda 환�
 ### TEST RESULT
 
 테스트 사진과 영상에 대한 detection 결과는 ./test_result 에서 확인하실 수 있습니다.
+
+---
+### colab_codes
+
+Fine Tuning에 사용된 코드를 확인하실 수 있습니다.
